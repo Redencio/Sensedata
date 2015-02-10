@@ -1,0 +1,61 @@
+
+Scheme:weka.classifiers.lazy.IBk -K 2 -W 0 -I -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     melfeatures
+
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 2 -W 0 -I -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     melfeatures
+Instances:    29929
+Attributes:   14
+              speech
+               Avgf0
+               Avgf1
+               Avgf2
+               Avgf3
+               Avgf4
+               Avgf5
+               Avgf6
+               Avgf7
+               Avgf8
+               Avgf9
+               Avgf10
+               Avgf11
+               Avgf12
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 2 inverse-distance-weighted nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       29064               97.1098 %
+Incorrectly Classified Instances       865                2.8902 %
+Kappa statistic                          0.9422
+Mean absolute error                      0.0351
+Root mean squared error                  0.1659
+Relative absolute error                  7.0103 %
+Root relative squared error             33.1756 %
+Total Number of Instances            29929     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.949     0.006      0.993     0.949     0.97       0.995    1
+                 0.994     0.051      0.951     0.994     0.972      0.995    0
+Weighted Avg.    0.971     0.029      0.972     0.971     0.971      0.995
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 14161   768 |     a = 1
+    97 14903 |     b = 0
+
+
+# Lena, environment analyser

@@ -1,0 +1,64 @@
+=== Model information ===
+
+Filename:     mfccAmodelj48.model
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     mfccA-weka.filters.unsupervised.attribute.Remove-R15
+Attributes:   14
+              speech
+               Avgf0
+               Avgf1
+               Avgf2
+               Avgf3
+               Avgf4
+               Avgf5
+               Avgf6
+               Avgf7
+               Avgf8
+               Avgf9
+               Avgf10
+               Avgf11
+               Avgf12
+
+=== Classifier model ===
+
+J48 pruned tree
+------------------
+
+ Avgf3 <= 5.773312: no (712.0)
+ Avgf3 > 5.773312: yes (719.0)
+
+Number of Leaves  : 	2
+
+Size of the tree : 	3
+
+
+=== Re-evaluation on test set ===
+
+User supplied test set
+Relation:     no2
+Instances:     unknown (yet). Reading incrementally
+Attributes:   15
+
+=== Summary ===
+
+Correctly Classified Instances         145               72.5    %
+Incorrectly Classified Instances        55               27.5    %
+Kappa statistic                          0.45  
+Mean absolute error                      0.275 
+Root mean squared error                  0.5244
+Coverage of cases (0.95 level)          72.5    %
+Total Number of Instances              200     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.770    0.320    0.706      0.770    0.737      0.452    0.725     0.659     no
+                 0.680    0.230    0.747      0.680    0.712      0.452    0.725     0.668     yes
+Weighted Avg.    0.725    0.275    0.727      0.725    0.724      0.452    0.725     0.664     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 77 23 |  a = no
+ 32 68 |  b = yes
+

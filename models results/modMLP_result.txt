@@ -1,0 +1,190 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     melfeatures
+Instances:    29929
+Attributes:   14
+              speech
+               Avgf0
+               Avgf1
+               Avgf2
+               Avgf3
+               Avgf4
+               Avgf5
+               Avgf6
+               Avgf7
+               Avgf8
+               Avgf9
+               Avgf10
+               Avgf11
+               Avgf12
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    15.341432365042392
+    Node 2    -1.6974012770284355
+    Node 3    -2.5064359464500527
+    Node 4    16.96908331039468
+    Node 5    -4.762420285644671
+    Node 6    16.886673867246625
+    Node 7    -10.785123730424576
+    Node 8    -4.8073741364320695
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -15.342148786522413
+    Node 2    1.667203223678895
+    Node 3    2.5067467881840355
+    Node 4    -16.96596401971112
+    Node 5    4.763731221669985
+    Node 6    -16.882675135904556
+    Node 7    10.785707833738059
+    Node 8    4.807847031555298
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    1.5122211814291149
+    Attrib  Avgf0    -1.5525779496627263
+    Attrib  Avgf1    -4.137902769952277
+    Attrib  Avgf2    -0.883842583417095
+    Attrib  Avgf3    -2.9013750219501864
+    Attrib  Avgf4    -1.0673479358314808
+    Attrib  Avgf5    -0.9759755835936975
+    Attrib  Avgf6    -1.2396837838887356
+    Attrib  Avgf7    -0.3578709078701644
+    Attrib  Avgf8    0.31782872376079024
+    Attrib  Avgf9    2.231709852923613
+    Attrib  Avgf10    2.6244140141161556
+    Attrib  Avgf11    -0.1307382228718722
+    Attrib  Avgf12    -1.025615079777644
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    14.143451720484085
+    Attrib  Avgf0    23.30197972695944
+    Attrib  Avgf1    -18.008613378109914
+    Attrib  Avgf2    1.931584816496868
+    Attrib  Avgf3    -34.01267329164489
+    Attrib  Avgf4    -30.640792005543418
+    Attrib  Avgf5    -14.167058385091623
+    Attrib  Avgf6    -13.344857334893808
+    Attrib  Avgf7    -9.636541595060326
+    Attrib  Avgf8    -16.343168523878443
+    Attrib  Avgf9    -2.996260812268278
+    Attrib  Avgf10    15.896926013847189
+    Attrib  Avgf11    20.132954095563
+    Attrib  Avgf12    38.018682598126944
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    36.679226209151125
+    Attrib  Avgf0    22.38629292929763
+    Attrib  Avgf1    -37.92437758951175
+    Attrib  Avgf2    -34.46796300444887
+    Attrib  Avgf3    -21.543567413738696
+    Attrib  Avgf4    5.687808459418723
+    Attrib  Avgf5    -9.425631883989123
+    Attrib  Avgf6    11.987308433072991
+    Attrib  Avgf7    20.54313978829401
+    Attrib  Avgf8    12.468748565578311
+    Attrib  Avgf9    15.85981863153511
+    Attrib  Avgf10    4.154795337796347
+    Attrib  Avgf11    -25.434992776978163
+    Attrib  Avgf12    -60.530638824259576
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    43.9589733181425
+    Attrib  Avgf0    -21.83138718231055
+    Attrib  Avgf1    -6.165175449399516
+    Attrib  Avgf2    -18.723418734320035
+    Attrib  Avgf3    -37.076587245717114
+    Attrib  Avgf4    3.046665387124086
+    Attrib  Avgf5    -8.539642190276448
+    Attrib  Avgf6    13.415565194665344
+    Attrib  Avgf7    -5.879122714336452
+    Attrib  Avgf8    -21.10501738537957
+    Attrib  Avgf9    -13.321804164631537
+    Attrib  Avgf10    1.6175988646694122
+    Attrib  Avgf11    -8.671254485703635
+    Attrib  Avgf12    43.752688718097986
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    38.24627402946037
+    Attrib  Avgf0    -128.91484570278277
+    Attrib  Avgf1    22.443843799224926
+    Attrib  Avgf2    -17.57454060948365
+    Attrib  Avgf3    6.270186547656777
+    Attrib  Avgf4    7.261133622307696
+    Attrib  Avgf5    -13.50433690137429
+    Attrib  Avgf6    10.00740450383326
+    Attrib  Avgf7    -0.7639433915174603
+    Attrib  Avgf8    15.807013721098475
+    Attrib  Avgf9    -9.893311543131189
+    Attrib  Avgf10    -30.105300780082025
+    Attrib  Avgf11    23.58524581130434
+    Attrib  Avgf12    34.61595316085584
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    13.689457487413149
+    Attrib  Avgf0    -106.69649766806646
+    Attrib  Avgf1    3.5452402470067694
+    Attrib  Avgf2    40.907752901234915
+    Attrib  Avgf3    34.590741866741226
+    Attrib  Avgf4    16.33033809294886
+    Attrib  Avgf5    15.926584177336563
+    Attrib  Avgf6    20.930121877304863
+    Attrib  Avgf7    -0.9815729880972307
+    Attrib  Avgf8    -17.67848525751689
+    Attrib  Avgf9    -3.4212765975004165
+    Attrib  Avgf10    9.750314889016344
+    Attrib  Avgf11    2.8314845341027235
+    Attrib  Avgf12    -9.461353447826763
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    30.775400677219658
+    Attrib  Avgf0    7.521339976014383
+    Attrib  Avgf1    -2.770334390162973
+    Attrib  Avgf2    -0.018164301283375813
+    Attrib  Avgf3    -7.0558989134867245
+    Attrib  Avgf4    13.914666148590387
+    Attrib  Avgf5    12.609793434077352
+    Attrib  Avgf6    8.615045506957289
+    Attrib  Avgf7    -16.025315005754468
+    Attrib  Avgf8    -15.394767833540856
+    Attrib  Avgf9    13.835600624136111
+    Attrib  Avgf10    19.590483228010648
+    Attrib  Avgf11    -41.54660476298077
+    Attrib  Avgf12    -63.55709367969226
+Class 1
+    Input
+    Node 0
+Class 0
+    Input
+    Node 1
+
+
+Time taken to build model: 43.95 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       27889               93.1839 %
+Incorrectly Classified Instances      2040                6.8161 %
+Kappa statistic                          0.8637
+Mean absolute error                      0.0987
+Root mean squared error                  0.2323
+Relative absolute error                 19.7322 %
+Root relative squared error             46.4599 %
+Total Number of Instances            29929     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.901     0.037      0.96      0.901     0.929      0.974    1
+                 0.963     0.099      0.907     0.963     0.934      0.974    0
+Weighted Avg.    0.932     0.068      0.933     0.932     0.932      0.974
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 13446  1483 |     a = 1
+   557 14443 |     b = 0

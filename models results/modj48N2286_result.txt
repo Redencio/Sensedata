@@ -1,0 +1,106 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     melfeatures_PlusFilename10sec_fin
+Instances:    2286
+Attributes:   15
+              speech
+               Avgf0
+               Avgf1
+               Avgf2
+               Avgf3
+               Avgf4
+               Avgf5
+               Avgf6
+               Avgf7
+               Avgf8
+               Avgf9
+               Avgf10
+               Avgf11
+               Avgf12
+               filename
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ Avgf3 <= 5.546376
+|    Avgf0 <= 3.12062: yes (55.0)
+|    Avgf0 > 3.12062
+|   |    Avgf3 <= 4.915521
+|   |   |    Avgf12 <= 7.823948
+|   |   |   |    Avgf10 <= 5.204264
+|   |   |   |   |    Avgf0 <= 4.806243
+|   |   |   |   |   |    Avgf0 <= 3.405286
+|   |   |   |   |   |   |    Avgf6 <= 3.409425: no (25.0/1.0)
+|   |   |   |   |   |   |    Avgf6 > 3.409425: yes (3.0)
+|   |   |   |   |   |    Avgf0 > 3.405286: no (447.0/4.0)
+|   |   |   |   |    Avgf0 > 4.806243
+|   |   |   |   |   |    Avgf3 <= 3.940585: no (18.0)
+|   |   |   |   |   |    Avgf3 > 3.940585: yes (7.0)
+|   |   |   |    Avgf10 > 5.204264
+|   |   |   |   |    Avgf0 <= 4.039384
+|   |   |   |   |   |    Avgf10 <= 5.259151: no (2.0)
+|   |   |   |   |   |    Avgf10 > 5.259151: yes (15.0/1.0)
+|   |   |   |   |    Avgf0 > 4.039384
+|   |   |   |   |   |    Avgf3 <= 4.138747
+|   |   |   |   |   |   |    Avgf0 <= 6.070737: no (206.0/2.0)
+|   |   |   |   |   |   |    Avgf0 > 6.070737
+|   |   |   |   |   |   |   |    Avgf8 <= 4.832028: yes (4.0)
+|   |   |   |   |   |   |   |    Avgf8 > 4.832028: no (7.0)
+|   |   |   |   |   |    Avgf3 > 4.138747
+|   |   |   |   |   |   |    Avgf4 <= 5.067915
+|   |   |   |   |   |   |   |    Avgf11 <= 6.9796: yes (20.0/2.0)
+|   |   |   |   |   |   |   |    Avgf11 > 6.9796
+|   |   |   |   |   |   |   |   |    Avgf3 <= 4.528422: no (9.0)
+|   |   |   |   |   |   |   |   |    Avgf3 > 4.528422: yes (2.0)
+|   |   |   |   |   |   |    Avgf4 > 5.067915: no (8.0)
+|   |   |    Avgf12 > 7.823948: no (336.0)
+|   |    Avgf3 > 4.915521
+|   |   |    Avgf12 <= 8.315009
+|   |   |   |    Avgf12 <= 4.408107: no (33.0)
+|   |   |   |    Avgf12 > 4.408107
+|   |   |   |   |    Avgf11 <= 5.828811
+|   |   |   |   |   |    Avgf4 <= 5.067915: yes (7.0)
+|   |   |   |   |   |    Avgf4 > 5.067915
+|   |   |   |   |   |   |    Avgf0 <= 4.608254: no (8.0)
+|   |   |   |   |   |   |    Avgf0 > 4.608254: yes (2.0)
+|   |   |   |   |    Avgf11 > 5.828811: yes (28.0)
+|   |   |    Avgf12 > 8.315009: no (48.0/1.0)
+ Avgf3 > 5.546376: yes (996.0/1.0)
+
+Number of Leaves  : 	23
+
+Size of the tree : 	45
+
+
+Time taken to build model: 0.26 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        2230               97.5503 %
+Incorrectly Classified Instances        56                2.4497 %
+Kappa statistic                          0.951 
+Mean absolute error                      0.0289
+Root mean squared error                  0.1542
+Relative absolute error                  5.7761 %
+Root relative squared error             30.8481 %
+Coverage of cases (0.95 level)          97.8128 %
+Mean rel. region size (0.95 level)      50.6124 %
+Total Number of Instances             2286     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.978    0.027    0.973      0.978    0.976      0.951    0.973     0.964     no
+                 0.973    0.022    0.978      0.973    0.975      0.951    0.973     0.961     yes
+Weighted Avg.    0.976    0.024    0.976      0.976    0.976      0.951    0.973     0.963     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 1118   25 |    a = no
+   31 1112 |    b = yes

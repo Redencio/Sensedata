@@ -1,0 +1,64 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     mfccB-weka.filters.unsupervised.attribute.Remove-R15
+Instances:    1405
+Attributes:   14
+              speech
+               Avgf0
+               Avgf1
+               Avgf2
+               Avgf3
+               Avgf4
+               Avgf5
+               Avgf6
+               Avgf7
+               Avgf8
+               Avgf9
+               Avgf10
+               Avgf11
+               Avgf12
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+ Avgf3 <= 5.49395: no (712.0/1.0)
+ Avgf3 > 5.49395: yes (693.0/1.0)
+
+Number of Leaves  : 	2
+
+Size of the tree : 	3
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1399               99.573  %
+Incorrectly Classified Instances         6                0.427  %
+Kappa statistic                          0.9915
+Mean absolute error                      0.0057
+Root mean squared error                  0.0653
+Relative absolute error                  1.1369 %
+Root relative squared error             13.0546 %
+Coverage of cases (0.95 level)          99.573  %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances             1405     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.996    0.004    0.996      0.996    0.996      0.991    0.996     0.994     no
+                 0.996    0.004    0.996      0.996    0.996      0.991    0.996     0.994     yes
+Weighted Avg.    0.996    0.004    0.996      0.996    0.996      0.991    0.996     0.994     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 709   3 |   a = no
+   3 690 |   b = yes
+

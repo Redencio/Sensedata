@@ -1,0 +1,55 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LibSVM -S 0 -K 2 -D 3 -G 0.0 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.001 -P 0.1 -model /Users/Capodit3 -seed 1
+Relation:     melfeatures
+Instances:    29929
+Attributes:   14
+              speech
+               Avgf0
+               Avgf1
+               Avgf2
+               Avgf3
+               Avgf4
+               Avgf5
+               Avgf6
+               Avgf7
+               Avgf8
+               Avgf9
+               Avgf10
+               Avgf11
+               Avgf12
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LibSVM wrapper, original code by Yasser EL-Manzalawy (= WLSVM)
+
+Time taken to build model: 37.94 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       28488               95.1853 %
+Incorrectly Classified Instances      1441                4.8147 %
+Kappa statistic                          0.9037
+Mean absolute error                      0.0481
+Root mean squared error                  0.2194
+Relative absolute error                  9.6295 %
+Root relative squared error             43.8851 %
+Coverage of cases (0.95 level)          95.1853 %
+Mean rel. region size (0.95 level)      50      %
+Total Number of Instances            29929     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.927    0.023    0.976      0.927    0.950      0.905    0.952     0.941     1
+                 0.977    0.073    0.930      0.977    0.953      0.905    0.952     0.921     0
+Weighted Avg.    0.952    0.048    0.953      0.952    0.952      0.905    0.952     0.931     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 13832  1097 |     a = 1
+   344 14656 |     b = 0
+

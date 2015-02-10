@@ -1,0 +1,61 @@
+Spectral Flatness / wiener entropy <<V>>
+Energy, volume in decibel <<V>>
+F, frequency vd hoogste piek in fft <<V>>
+
+
+spectral slope, 
+correlation coefficients, 
+log likelihood ratio, 
+cepstral, 
+weighted cepstral, and 
+modified distance measures
+
+Power of sound in db or watts
+
+Sound Wave Properties
+
+*Wavelength: The distance between any point on a wave and the equivalent point on the next phase. Literally, the length of the wave.
+
+*Amplitude: The strength or power of a wave signal. The "height" of a wave when viewed as a graph.
+
+*Higher amplitudes are interpreted as a higher volume, hence the name "amplifier" for a device that increases amplitude.
+
+*Frequency: The number of times the wavelength occurs in one second. Measured in kilohertz (Khz), or cycles per second. The faster the sound source vibrates, the higher the frequency.
+
+*Higher frequencies are interpreted as a higher pitch. For example, when you sing in a high-pitched voice you are forcing your vocal chords to vibrate quickly.
+
+*The perceived intensity of a sound is dependant on the sound energy density at the position of the listener.
+
+
+*Sound pressure, which is measured in unit Pascals (pa), s a measure of the pressure levels arriving from a sound source relative to the local ambient pressure level.
+Voices talking, 40 – 60db, 2 x 10 -3 – 2 x 10 -2 pa
+http://www.fon.hum.uva.nl/praat/manual/Intensity.html
+
+*Harmonicity,
+A harmonic of a wave is a component frequency of the signal that is an integer multiple of the fundamental frequency, i.e. if the fundamental frequency is f, the harmonics have frequencies 2f, 3f, 4f, . . . etc. The harmonics have the property that they are all periodic at the fundamental frequency, therefore the sum of harmonics is also periodic at that frequency. Harmonic frequencies are equally spaced by the width of the fundamental frequency and can be found by repeatedly adding that frequency. For example, if the fundamental frequency (first harmonic) is 25 Hz, the frequencies of the next harmonics are: 50 Hz (2nd harmonic), 75 Hz (3rd harmonic), 100 Hz (4th harmonic) etc.
+http://www.fon.hum.uva.nl/praat/manual/Harmonicity.html
+
+*Pitch
+http://www.fon.hum.uva.nl/praat/manual/Pitch.html
+
+*Timbre is the descriptive element of sound quality. It is the distinction that one sound is harsher than another, softer than another, warmer, brighter, darker, and so on. determined by the harmonic content of the signal
+
+* Pitch Tracker DTFE (Direct Time Domain Frequency Estimator)
+DTFE (also denoted DFE) is a novel algorithm for fundamental frequency estimation and voiced/unvoiced (V/UV) classification performed directly in the time domain. The algorithm is designed to provide real-time pitch detection with time and frequency resolution comparable or superior to autocorrelation-based schemes while significantly reducing computational costs. The DTFE algorithm comprises spectral shaping, adaptive thresholding, and F0 candidate selection based on consistency criteria. The primary application is on clean speech signals (close-talk channels).
+
+
+Chosen features:
+*Mel Frequency Cepstral Coefficient (MFCC) (cepstral 0-13 coeffs)
+* Spectral Information
+* Jitter
+* Shimmer
+* Harmonics to noise ratio HNR
+* Mean Autocorrelation
+* 'pitch'
+* 'sd_pitch'
+* 'min_pitch'
+* 'max_pitch'
+* 'intensity'
+* 'sd_intensity'
+* 'min_intensity'
+* 'max_intensity'
