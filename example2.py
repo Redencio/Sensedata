@@ -10,27 +10,27 @@ from os.path import isfile, join
 mypath_speech  = '/Volumes/LstarR HDD/Redencio2013-2014/geluidsbestanden/stem2'
 '''
 
-mypath_noise  =  "/Volumes/LstarR HDD/Redencio2013-2014/josephinesoundNoise/"
-mypath_speech  = "/Volumes/LstarR HDD/Redencio2013-2014/josephinesoundSpeech/"
+mypath_noise  =  "/Volumes/LstarR HDD/Redencio2013-2014/noise_sec2/"
+mypath_speech  = "/Volumes/LstarR HDD/Redencio2013-2014/speech corpus48_wavs4_5_sec2/"
 
 #mypath_noise = '/Volumes/LstarR HDD/Redencio2013-2014/noise_10sec'
 #mypath_speech = '/Volumes/LstarR HDD/Redencio2013-2014/speech corpus48_wavs'
 
 onlyfiles = [ f for f in listdir(mypath_noise) if isfile(join(mypath_noise,f)) ]
 mypath_speech = [ f for f in listdir(mypath_speech) if isfile(join(mypath_speech,f)) ]
-csv = open("melfeatures_PlusFilename_no2Jos_new.csv", "w")
+csv = open("mel1a.csv", "w")
 header = 'speech, Avgf0, Avgf1, Avgf2, Avgf3, Avgf4, Avgf5, Avgf6, Avgf7, Avgf8, Avgf9, Avgf10, Avgf11, Avgf12, filename'
 csv.write(header)
 csv.write('\n')
 
 def writeMelToCSV(logMelFeats):
-    csv.write('no')
+    csv.write('0')
     for feat in logMelFeats:
         csv.write(',')
         csv.write(str(feat))
 
 def writeMelToCSVspeech(logMelFeats):
-    csv.write('yes')
+    csv.write('1')
     for feat in logMelFeats:
         csv.write(',')
         csv.write(str(feat))
@@ -40,7 +40,7 @@ def writeMelToCSVspeech(logMelFeats):
 for file in onlyfiles:
     if not file == '.DS_Store':
         #(rate,sig) = wav.read("/Users/Capodit3/Documents/Sensedata/sense-os project2/noise/"+file)
-        (rate,sig) = wav.read("/Volumes/LstarR HDD/Redencio2013-2014/josephinesoundNoise/"+file)
+        (rate,sig) = wav.read("/Volumes/LstarR HDD/Redencio2013-2014/noise_sec2/"+file)
         mfcc_feat = mfcc(sig,rate)
         fbank_feat = logfbank(sig,rate)
         sum_feat = sum(fbank_feat[:,:])/len(fbank_feat)
@@ -53,7 +53,7 @@ for file in onlyfiles:
 for file in mypath_speech:
     if not file == '.DS_Store':
         #(rate,sig) = wav.read("/Users/Capodit3/Documents/Sensedata/sense-os project2/speech/"+file)
-        (rate,sig) = wav.read("/Volumes/LstarR HDD/Redencio2013-2014/josephinesoundSpeech/"+file)
+        (rate,sig) = wav.read("/Volumes/LstarR HDD/Redencio2013-2014/speech corpus48_wavs4_5_sec2/"+file)
         mfcc_feat = mfcc(sig,rate)
         fbank_feat = logfbank(sig,rate)
         sum_feat = sum(fbank_feat[:,:])/len(fbank_feat)

@@ -1,5 +1,5 @@
 form Read multiple files
-	sentence source_directory /Volumes/LstarR HDD/Redencio2013-2014/josephinesoundSpeech/
+	sentence source_directory /Volumes/LstarR HDD/Redencio2013-2014/noise_sec2/
 	#sentence source_directory /Users/Capodit3/Documents/Sensedata/sense-os project2/noiseSound/
 	sentence file_extension .wav
 endform
@@ -9,7 +9,7 @@ Sort
 
 string_ID = selected("Strings")
 number_of_files = Get number of strings
-printline file_name ; total_energy;total_F;total_SFM; speech; 
+#printline file_name ; total_energy;total_F;total_SFM; speech; 
 
 for ifile to number_of_files 
 	select Strings list
@@ -118,7 +118,7 @@ for ifile to number_of_files
 	total_SFM = wiener_entropy
 
 	#uitprinten resultaten
-	printline file 'file_name$' ; 'total_energy';'total_F';'total_SFM'; yes; 
+	printline 'file_name$';'total_energy';'total_F';'total_SFM';0; 
 
 endfor
 
