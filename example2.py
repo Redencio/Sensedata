@@ -18,16 +18,20 @@ mypath_speech  = "/Volumes/LstarR HDD/Redencio2013-2014/speech corpus48_wavs4_5_
 
 onlyfiles = [ f for f in listdir(mypath_noise) if isfile(join(mypath_noise,f)) ]
 mypath_speech = [ f for f in listdir(mypath_speech) if isfile(join(mypath_speech,f)) ]
-csv = open("mel1a.csv", "w")
-header = 'speech, Avgf0, Avgf1, Avgf2, Avgf3, Avgf4, Avgf5, Avgf6, Avgf7, Avgf8, Avgf9, Avgf10, Avgf11, Avgf12, filename'
+csv = open("mel1stdv.csv", "w")
+header = 'speech,Avgf0,stdv0,Avgf1,stdv1,Avgf2,stdv2,Avgf3,stdv3,Avgf4,stdv4,Avgf5,stdv5,Avgf6,stdv6,Avgf7,stdv7,Avgf8,stdv8,Avgf9,stdv9,Avgf10,stdv10,Avgf11,stdv11,Avgf12,stdv12,filename'
 csv.write(header)
 csv.write('\n')
 
-def writeMelToCSV(logMelFeats):
+#stdev()
+
+def writeMelToCSV(logMelFeats, stdv):
     csv.write('0')
     for feat in logMelFeats:
         csv.write(',')
         csv.write(str(feat))
+        csv.write(',')
+        csv.write(str(stdv))
 
 def writeMelToCSVspeech(logMelFeats):
     csv.write('1')
@@ -43,9 +47,10 @@ for file in onlyfiles:
         (rate,sig) = wav.read("/Volumes/LstarR HDD/Redencio2013-2014/noise_sec2/"+file)
         mfcc_feat = mfcc(sig,rate)
         fbank_feat = logfbank(sig,rate)
+        stdv = stdev()
         sum_feat = sum(fbank_feat[:,:])/len(fbank_feat)
         sum_feat = sum_feat[0:13]
-        writeMelToCSV(sum_feat)
+        writeMelToCSV(sum_feat, stdv)
         print 'Non: ', sum_feat[0:13]
         csv.write(','+file+'\n')
 
