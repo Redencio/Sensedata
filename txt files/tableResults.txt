@@ -1,0 +1,18 @@
+			testset
+			
+		| mfccA | melfeatures 	| no2	| jos
+mfccA		| 99.8	| 67		| 72.5	| 64
+melfeatures	| 80.5	| 94.7		| 60	| 49
+no2		| 50	| 50		| 86	| 48
+jos		| 91	| 43		| 72	| 71
+Based on j48, standaard classifier..
+
+Table1. Result testing of models. Cols represents Testset, rows represents trainset
+
+
+		| mfccA | melfeatures 	| no2
+mfccA		| 99.9	| X		| 72.5
+melfeatures	| 80.5	| 94.7		| X
+no2		| 86	| 50		| 50
+
+Based on LIBsvm, standaard classifier..

@@ -1,0 +1,59 @@
+Dataset: mfccA
+* Audio book opgenomen met telefoon
+- 2h, 719 keer 10 sec
+* Zelfde ruimte noise met telefoon opgenomen
+- 2h, 712 keer 10 sec
+
+Algorithme
+- J48, standaard
+- MFCC[0:12] (average)
+
+Methode:
+10fold crossvalidation
+
+Resultaat:
+Correctly Classified Instances        1429               99.8602 %
+Incorrectly Classified Instances         2                0.1398 %
+
+Met test set: no2
+
+Noise
+Source: 
+Gesprek:
+Recorded:
+- Kitchen, Hallway, Office, 
+- 100 spraak, 100 noise
+
+Resultaat:
+Correctly Classified Instances         145               72.5    %
+Incorrectly Classified Instances        55               27.5    %
+
+Selected attributes:
+ Avgf3 <= 5.773312: no (712.0)
+ Avgf3 > 5.773312: yes (719.0)
+
+
+
+Dataset: melfeatures
+    a     b   <-- classified as
+ 13900  1029 |     a = 1
+   547 14453 |     b = 0
+** Zelfgemaakte spraak + noise.
+
+Algorithme
+- J48, standaard
+- MFCC[0:12] (average)
+
+Methode:
+10fold crossvalidation
+
+Resultaat:
+Correctly Classified Instances       28353               94.7342 %
+Incorrectly Classified Instances      1576                5.2658 %
+
+
+Testset: mfccA2
+
+Correctly Classified Instances        1153               80.573  %
+Incorrectly Classified Instances       278               19.427  %
+
