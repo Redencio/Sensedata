@@ -12,6 +12,9 @@ from numpy import NaN, Inf, arange, isscalar, asarray, array
 mypath  = '/Volumes/LstarR HDD/Redencio2013-2014/noise_5min'
 mypathS = '/Volumes/LstarR HDD/Redencio2013-2014/noise_10sec'
 
+mypath = '/Users/agentleman/Downloads/audio'
+mypathS = '/Users/agentleman/Downloads/audio10'
+
 onlyfiles = [ f for f in listdir(mypath) if isfile(join(mypath,f)) ]
 
 def splitAudio(x, fram, rate, f, d):
@@ -35,9 +38,9 @@ def splitAudio(x, fram, rate, f, d):
 		#wf.setframerate((rate))
 		wf.setframerate((rate))
 		#wf.writeframes(x[rateS:rateS + rate])
-		wf.writeframes(x[rateS:rateS + rate * 10])
-		#rateS = rateS + rate
-		wf.writeframes(x[rateS:rateS + rate * 10])
+		wf.writeframes(x[rateS:rateS + rate * 20])
+		rateS = rateS + rate * 10
+		#wf.writeframes(x[rateS:rateS + rate * 10])
 		wf.close()
 
 
@@ -51,29 +54,31 @@ def splitAudio(x, fram, rate, f, d):
 for f in onlyfiles:
 	print mypath+'/'+f
 	try:
-		x = wave.open(mypath+'/'+f, "rb")
-		#Extract Raw Audio from Wav File
-		chan = x.getnchannels()
-		#print 'number of channels ', chan
-		#Returns number of audio channels (1 for mono, 2 for stereo).
+		if not f == '.DS_Store':
+			
+			x = wave.open(mypath+'/'+f, "rb")
+			#Extract Raw Audio from Wav File
+			chan = x.getnchannels()
+			#print 'number of channels ', chan
+			#Returns number of audio channels (1 for mono, 2 for stereo).
 
 
-		samp = x.getsampwidth()
-		#print 'samplewidth ', samp
-		#Returns sample width in bytes.
+			samp = x.getsampwidth()
+			#print 'samplewidth ', samp
+			#Returns sample width in bytes.
 
-		rate = x.getframerate()
-		#print 'frame rate ', rate
-		#Returns sampling frequency.
+			rate = x.getframerate()
+			#print 'frame rate ', rate
+			#Returns sampling frequency.
 
-		fram = x.getnframes()
-		#print 'number of frames ', fram
-		#Returns number of audio frames.
-		x = x.readframes(fram)
-		x = np.fromstring(x, 'Int16')
-		print x, fram, rate, f, mypath
-		splitAudio(x, fram, rate, f, mypathS)
-		x.close()
+			fram = x.getnframes()
+			#print 'number of frames ', fram
+			#Returns number of audio frames.
+			x = x.readframes(fram)
+			x = np.fromstring(x, 'Int16')
+			print x, fram, rate, f, mypath
+			splitAudio(x, fram, rate*2, f, mypathS)
+			x.close()
 	except:
 		print '' #"Oops!"
 

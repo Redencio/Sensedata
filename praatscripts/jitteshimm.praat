@@ -1,5 +1,5 @@
-samples_directory$ = "/Volumes/LstarR HDD/Redencio2013-2014/noise_sec2/"
-#samples_directory$ = "/Volumes/LstarR HDD/Redencio2013-2014/speech corpus48_wavs4_5_sec2/"
+#samples_directory$ = "/Users/agentleman/Documents/audio10noise/"
+samples_directory$ = "/Users/agentleman/Documents/Sensedata/audio10/"
 Create Strings as file list... list 'samples_directory$'/*.wav
 #Sort
 string_ID = selected("Strings")
@@ -107,7 +107,7 @@ clearinfo
 	select Table vectors
 	Set numeric value... i pitch1 pitchMean
 	##print 'pitchMean'
-	Set string value... i speechJ 0
+	Set string value... i speechJ 1
 	Set numeric value... i pitch2 pitchSD
 	Set numeric value... i jitt1 jitterLocal
 	Set numeric value... i jitt2 jitterLocalAbsol
@@ -123,6 +123,6 @@ clearinfo
 	Set string value... i filename 'currentSound$'
 
 	select Table vectors
-	Write to table file... /Users/Capodit3/Documents/Sensedata/jittShimmNoise.csv
-	Write to table file... /Users/Capodit3/Documents/Sensedata/jittShimmSpeech.csv
+	#Write to table file... /Users/agentleman/Documents/Sensedata/jittShimmNoise-audio10.csv
+	Write to table file... /Users/agentleman/Documents/Sensedata/jittShimmSpeech-audio10.csv
 endfor

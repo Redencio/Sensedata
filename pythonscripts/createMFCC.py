@@ -9,25 +9,25 @@ from os.path import isfile, join
 #mypath_noise  = '/Users/Capodit3/Documents/Sensedata/sense-os project2/noise'
 #mypath_speech  = '/Users/Capodit3/Documents/Sensedata/sense-os project2/speech'
 
-mypath_noise = '/Volumes/LstarR HDD/Redencio2013-2014/noise_10sec'
+mypath_noise = '/Users/agentleman/Documents/audio10noise'
 #mypath_speech = '/Volumes/LstarR HDD/Redencio2013-2014/speech corpus48_wavs'
-mypath_speech = "/Users/Capodit3/Documents/Sensedata/sense-os project2/noiseSound"
+mypath_speech = "/Users/agentleman/Documents/Sensedata/audio10"
 
 onlyfiles = [ f for f in listdir(mypath_noise) if isfile(join(mypath_noise,f)) ]
 mypath_speech = [ f for f in listdir(mypath_speech) if isfile(join(mypath_speech,f)) ]
-csv = open("melfeatures_PlusFilename_noNL.csv", "w")
+csv = open("mfcc-audio10.csv", "w")
 header = 'speech, Avgf0, Avgf1, Avgf2, Avgf3, Avgf4, Avgf5, Avgf6, Avgf7, Avgf8, Avgf9, Avgf10, Avgf11, Avgf12, filename'
 csv.write(header)
 csv.write('\n')
 
 def writeMelToCSV(logMelFeats):
-    csv.write('no')
+    csv.write('0')
     for feat in logMelFeats:
         csv.write(',')
         csv.write(str(feat))
 
 def writeMelToCSVspeech(logMelFeats):
-    csv.write('yes')
+    csv.write('1')
     for feat in logMelFeats:
         csv.write(',')
         csv.write(str(feat))

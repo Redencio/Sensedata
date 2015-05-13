@@ -1,7 +1,8 @@
 form Read multiple files
-	sentence source_directory /Volumes/LstarR HDD/Redencio2013-2014/josSpeech/
-	#sentence source_directory /Users/Capodit3/Documents/Sensedata/sense-os project2/noiseSound/
-	sentence file_extension .mp3
+	#sentence source_directory /Users/agentleman/Documents/audio10noise
+	sentence source_directory /Volumes/LstarR HDD/Redencio2013-2014/usedaudio/noise_locations
+	#sentence source_directory /Users/agentleman/Documents/Sensedata/sense-os project2/noiseSound/
+	sentence file_extension .wav
 endform
 #/Volumes/LstarR HDD/Redencio2013-2014/sense - audio/speechCorpus/
 Create Strings as file list... list 'source_directory$'/*'file_extension$'
@@ -9,14 +10,14 @@ Sort
 
 string_ID = selected("Strings")
 number_of_files = Get number of strings
-printline file_name;total_energy;total_F;total_SFM;speech;
+printline file_name;total_energy;total_F;total_SFM;speech;speakerID
 
 for ifile to number_of_files 
 	select Strings list
 	file_name$ = Get string... ifile
 	audio$ = Read from file... 'source_directory$'/'file_name$'
 	
-	object_name$  = replace_regex$ (file_name$, ".mp3", "", 0)
+	object_name$  = replace_regex$ (file_name$, ".wav", "", 0)
 	object_name$  = replace_regex$ (object_name$, " ", "_", 0)
 	select Sound 'object_name$'
 	
@@ -118,7 +119,7 @@ for ifile to number_of_files
 	total_SFM = wiener_entropy
 
 	#uitprinten resultaten
-	printline 'file_name$';'total_energy';'total_F';'total_SFM';1;
+	printline 'file_name$';'total_energy';'total_F';'total_SFM';0;'null'
 
 endfor
 
