@@ -1,7 +1,7 @@
 form Read multiple files
 	#sentence source_directory /Users/agentleman/Documents/audio10noise
-	sentence source_directory /Volumes/LstarR HDD/Redencio2013-2014/usedaudio/noise_locations
-	#sentence source_directory /Users/agentleman/Documents/Sensedata/sense-os project2/noiseSound/
+	#sentence source_directory /Volumes/LstarR HDD/Redencio2013-2014/usedaudio/noise_locations
+	sentence source_directory /Users/agentleman/Documents/Sensedata/data/youtube_noise
 	sentence file_extension .wav
 endform
 #/Volumes/LstarR HDD/Redencio2013-2014/sense - audio/speechCorpus/

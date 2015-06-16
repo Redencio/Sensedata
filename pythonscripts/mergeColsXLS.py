@@ -1,6 +1,5 @@
 import csv
 
-#csv1 = open('mfccJos.csv', 'rb')
 csv2 = open('vad1a+b.csv', 'rb')
 csv2 = open('jittShimm.csv', 'rb')
 csvTo = open('jshMfccTotalab.csv', 'wb')

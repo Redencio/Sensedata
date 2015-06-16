@@ -12,8 +12,8 @@ from numpy import NaN, Inf, arange, isscalar, asarray, array
 mypath  = '/Volumes/LstarR HDD/Redencio2013-2014/noise_5min'
 mypathS = '/Volumes/LstarR HDD/Redencio2013-2014/noise_10sec'
 
-mypath = '/Users/agentleman/Downloads/audio'
-mypathS = '/Users/agentleman/Downloads/audio10'
+mypath = '/Users/agentleman/Documents/Sensedata/data/conan'
+mypathS = '/Users/agentleman/Documents/Sensedata/data/conan2'
 
 onlyfiles = [ f for f in listdir(mypath) if isfile(join(mypath,f)) ]
 
@@ -54,9 +54,10 @@ def splitAudio(x, fram, rate, f, d):
 for f in onlyfiles:
 	print mypath+'/'+f
 	try:
-		if not f == '.DS_Store':
-			
+		if not '.DS_Store' in f:
+			print 'hi1'
 			x = wave.open(mypath+'/'+f, "rb")
+			print x
 			#Extract Raw Audio from Wav File
 			chan = x.getnchannels()
 			#print 'number of channels ', chan
